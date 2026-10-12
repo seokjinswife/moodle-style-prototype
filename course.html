@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="support-bar">
+        <div class="support-left">☎ Тех.поддержка : +7 (343) 227-20-70 ✉ Эл.почта : support@urfu.ru</div>
+        <div class="support-right">♧ ▢ ⌄</div>
+    </div>
+    <header class="main-header">
+        <a class="brand" href="index.html" aria-label="Портал электронного обучения">
+            <span class="brand-mark">У</span>
+            <span class="brand-text">ПОРТАЛ<br>ЭЛЕКТРОННОГО<br>ОБУЧЕНИЯ</span>
+        </a>
+        <nav class="main-nav">
+            <a href="index.html">В начало</a>
+            <a href="index.html">Личный кабинет</a>
+            <a href="index.html">Мои курсы</a>
+            <a href="#support">Запрос в тех.поддержку</a>
+        </nav>
+    </header>
+
+    <main class="page-wrap course-page">
+        <a class="back-link" href="index.html">← Мои курсы</a>
+        <h1 id="course-title">Интерфейсы</h1>
+        <nav class="course-tabs" aria-label="Разделы курса">
+            <button class="course-tab active" data-tab="course-content">Курс</button>
+            <button class="course-tab" data-tab="participants">Участники</button>
+            <button class="course-tab" data-tab="grades">Оценки</button>
+            <button class="course-tab" data-tab="competencies">Компетенции</button>
+        </nav>
+
+        <section id="course-content" class="tab-panel">
+            <div class="course-toolbar"><span class="announcement-icon">▤</span><a href="#announcements">Объявления</a><span class="toolbar-spacer"></span><button class="round-button" title="Дополнительные действия">•••</button><button class="round-button" title="Свернуть раздел">×</button></div>
+            <div class="completion-label">✓ &nbsp; Все завершённые</div>
+
+            <section class="topic-block">
+                <h2>Тема 1. Основные материалы</h2>
+                <p class="topic-description">Учебные материалы доступны для просмотра в браузере или скачивания на компьютер.</p>
+                <div class="material-row">
+                    <div class="file-symbol pdf">PDF</div>
+                    <div class="material-info"><strong>Лекция. Введение в тему</strong><span>PDF-документ · демонстрационный материал</span></div>
+                    <button class="action-button preview-button" data-preview="lecture">Предпросмотр</button>
+                    <button class="action-button download-button" data-download="lecture">Скачать</button>
+                </div>
+                <div class="material-row">
+                    <div class="file-symbol doc">TXT</div>
+                    <div class="material-info"><strong>Пример чек-листа</strong><span>Текстовый файл · демонстрационный материал</span></div>
+                    <button class="action-button preview-button" data-preview="checklist">Предпросмотр</button>
+                    <button class="action-button download-button" data-download="checklist">Скачать</button>
+                </div>
+                <div class="material-row">
+                    <div class="file-symbol doc">TXT</div>
+                    <div class="material-info"><strong>Задание к лабораторной работе</strong><span>Текстовый файл · демонстрационное задание</span></div>
+                    <button class="action-button preview-button" data-preview="lab">Предпросмотр</button>
+                    <button class="action-button download-button" data-download="lab">Скачать</button>
+                </div>
+            </section>
+            <section class="topic-block">
+                <h2>Тема 2. Практическая работа</h2>
+                <div class="material-row">
+                    <div class="file-symbol doc">TXT</div>
+                    <div class="material-info"><strong>Инструкция к практической работе</strong><span>Текстовый файл · демонстрационный материал</span></div>
+                    <button class="action-button preview-button" data-preview="practice">Предпросмотр</button>
+                    <button class="action-button download-button" data-download="practice">Скачать</button>
+                </div>
+            </section>
+        </section>
+
+        <section id="participants" class="tab-panel simple-panel" hidden><h2>Участники</h2><p>В этом демонстрационном прототипе список участников не подключён.</p></section>
+        <section id="grades" class="tab-panel simple-panel" hidden><h2>Оценки</h2><p>В этом демонстрационном прототипе оценки не подключены.</p></section>
+        <section id="competencies" class="tab-panel simple-panel" hidden><h2>Компетенции</h2><p>В этом демонстрационном прототипе компетенции показаны как пример интерфейса.</p></section>
+    </main>
+    <div id="preview-modal" class="modal" hidden>
+        <div class="modal-window" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <div class="modal-header"><h2 id="modal-title">Предпросмотр файла</h2><button id="close-modal" class="round-button" aria-label="Закрыть">×</button></div>
+            <div id="modal-content" class="modal-content"></div>
+            <div class="modal-footer"><button id="close-modal-bottom" class="action-button">Закрыть</button></div>
+        </div>
+    </div>
+    <div class="help-button" title="Помощь">?</div>
+</body>
+</html>

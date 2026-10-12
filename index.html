@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои курсы</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="support-bar">
+        <div class="support-left">☎ Тех.поддержка : +7 (343) 227-20-70 ✉ Эл.почта : support@urfu.ru</div>
+        <div class="support-right">♧ ▢ ⌄</div>
+    </div>
+    <header class="main-header">
+        <a class="brand" href="index.html" aria-label="Портал электронного обучения">
+            <span class="brand-mark">У</span>
+            <span class="brand-text">ПОРТАЛ<br>ЭЛЕКТРОННОГО<br>ОБУЧЕНИЯ</span>
+        </a>
+        <nav class="main-nav">
+            <a href="index.html">В начало</a>
+            <a href="index.html">Личный кабинет</a>
+            <a class="selected" href="index.html">Мои курсы</a>
+            <a href="#support">Запрос в тех.поддержку</a>
+        </nav>
+    </header>
+
+    <main class="page-wrap">
+        <h1>Мои курсы</h1>
+        <h2 class="greeting">Здравствуйте, Дарья! <span aria-hidden="true">👋</span></h2>
+
+        <section class="course-overview">
+            <div class="overview-heading">Обзор курсов</div>
+            <div class="overview-body">
+                <div class="course-tools">
+                    <select id="course-filter" aria-label="Фильтр курсов">
+                        <option value="all">Все курсы</option>
+                        <option value="current">Текущие курсы</option>
+                        <option value="completed">Завершённые курсы</option>
+                    </select>
+                    <input id="search" type="search" placeholder="Найти курс" aria-label="Найти курс">
+                    <select id="sort" aria-label="Сортировка курсов">
+                        <option value="default">Упорядочить по названию курса</option>
+                        <option value="asc">Название: А–Я</option>
+                        <option value="desc">Название: Я–А</option>
+                    </select>
+                    <span class="view-select">Карточка⌄</span>
+                </div>
+
+                <div class="course-grid" id="course-grid">
+                    <a class="moodle-course-card" href="course.html?course=interfaces" data-name="Интерфейсы" data-status="current">
+                        <div class="course-cover cover-lines"><span class="cover-line"></span></div>
+                        <div class="course-card-content">
+                            <div class="course-name">Интерфейсы</div>
+                            <div class="course-category">Информационные системы и технологии в наукоёмких отраслях</div>
+                            <div class="course-progress"><span class="progress-track"><span style="width:100%"></span></span><span>100% завершено</span></div>
+                        </div>
+                    </a>
+                    <a class="moodle-course-card" href="course.html?course=ux" data-name="UX-психология" data-status="current">
+                        <div class="course-cover cover-ux"><span>UX-психология</span></div>
+                        <div class="course-card-content">
+                            <div class="course-name">UX-психология</div>
+                            <div class="course-category">Проектирование пользовательского опыта</div>
+                            <div class="course-progress"><span class="progress-track"><span style="width:64%"></span></span><span>64% завершено</span></div>
+                        </div>
+                    </a>
+                    <a class="moodle-course-card" href="course.html?course=prototype" data-name="Прототипирование интерфейсов" data-status="current">
+                        <div class="course-cover cover-prototype"><span class="course-icon">▤</span></div>
+                        <div class="course-card-content">
+                            <div class="course-name">Прототипирование интерфейсов</div>
+                            <div class="course-category">Информационные системы и технологии</div>
+                            <div class="course-progress"><span class="progress-track"><span style="width:41%"></span></span><span>41% завершено</span></div>
+                        </div>
+                    </a>
+                    <a class="moodle-course-card" href="course.html?course=digital" data-name="Человек в цифровой среде" data-status="current">
+                        <div class="course-cover cover-digital"><span>Человек в цифровой<br>среде</span></div>
+                        <div class="course-card-content">
+                            <div class="course-name">Человек в цифровой среде</div>
+                            <div class="course-category">Цифровые технологии и общество</div>
+                            <div class="course-progress"><span class="progress-track"><span style="width:36%"></span></span><span>36% завершено</span></div>
+                        </div>
+                    </a>
+                    <a class="moodle-course-card" href="course.html?course=testing" data-name="Тестирование программного обеспечения" data-status="current">
+                        <div class="course-cover cover-testing"><span class="course-icon">☷</span></div>
+                        <div class="course-card-content">
+                            <div class="course-name">Тестирование программного обеспечения</div>
+                            <div class="course-category">Разработка и проверка программных систем</div>
+                            <div class="course-progress"><span class="progress-track"><span style="width:22%"></span></span><span>22% завершено</span></div>
+                        </div>
+                    </a>
+                    <a class="moodle-course-card" href="course.html?course=ai" data-name="Искусственный интеллект" data-status="completed">
+                        <div class="course-cover cover-ai"><span class="course-icon">✳</span></div>
+                        <div class="course-card-content">
+                            <div class="course-name">Искусственный интеллект</div>
+                            <div class="course-category">Информационные технологии</div>
+                            <div class="course-progress"><span class="progress-track"><span style="width:100%"></span></span><span>100% завершено</span></div>
+                        </div>
+                    </a>
+                </div>
+                <p id="empty-message" class="empty-message" hidden>Курсы не найдены. Измени поисковый запрос или фильтр.</p>
+            </div>
+        </section>
+    </main>
+    <div class="help-button" title="Помощь">?</div>
+</body>
+</html>
